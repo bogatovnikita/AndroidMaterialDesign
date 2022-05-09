@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Material Design</string>
+    <string name="network_error">Network error</string>
 </resources>
