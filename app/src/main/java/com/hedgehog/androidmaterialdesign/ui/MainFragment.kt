@@ -7,10 +7,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import coil.load
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.FragmentMainBinding
 import com.hedgehog.androidmaterialdesign.domain.NasaRepositoryImplementation
-import kotlinx.coroutines.flow.collect
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -48,17 +48,20 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                     binding.pictureOfTheDayImg.load(it)
                 }
             }
+            val bottomSheetFragment =
+                BottomSheetBehavior.from(binding.includeBottomSheet.bottomSheetContainer)
+            bottomSheetFragment.state = BottomSheetBehavior.STATE_COLLAPSED
         }
 
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {
-            viewModel.title.collect() {
+            viewModel.title.collect {
                 binding.titleTv.text = it
             }
         }
 
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {
             viewModel.explanation.collect() {
-                binding.explanationTv.text = it
+                binding.includeBottomSheet.explanationTv.text = it
             }
         }
     }
