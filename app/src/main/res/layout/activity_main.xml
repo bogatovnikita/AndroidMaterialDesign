@@ -15,7 +15,7 @@
             style="@style/MyToolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            app:menu="@menu/menu"
+            app:menu="@menu/main_menu"
             app:title="@string/app_name" />
 
     </com.google.android.material.appbar.AppBarLayout>

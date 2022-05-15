@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/choose_theme"
+        android:id="@+id/choose_theme_item_menu"
         android:icon="@drawable/ic_baseline_colorize_24"
         android:title="@string/choose_theme"
-        app:showAsAction="always"/>
+        app:showAsAction="never" />
 </menu>

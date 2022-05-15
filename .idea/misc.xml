@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/activity_main.xml" value="0.20615384615384616" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.209375" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_choose_theme.xml" value="0.209375" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_main.xml" value="0.18425925925925926" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/frahment_choose_theme.xml" value="0.20615384615384616" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/menu/main_menu.xml" value="0.209375" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/menu/menu.xml" value="0.20615384615384616" />
       </map>
     </option>
