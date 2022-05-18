@@ -1,4 +1,4 @@
-package com.hedgehog.androidmaterialdesign.ui
+package com.hedgehog.androidmaterialdesign.ui.fragments
 
 import android.content.Intent
 import android.net.Uri
@@ -11,12 +11,14 @@ import androidx.lifecycle.coroutineScope
 import coil.load
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hedgehog.androidmaterialdesign.R
-import com.hedgehog.androidmaterialdesign.databinding.FragmentMainBinding
+import com.hedgehog.androidmaterialdesign.databinding.FragmentPictureOfTheDayBinding
 import com.hedgehog.androidmaterialdesign.domain.NasaRepositoryImplementation
+import com.hedgehog.androidmaterialdesign.view_models.PictureOfTheDayModel
+import com.hedgehog.androidmaterialdesign.view_models.MainViewModelFactory
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+class PictureOfTheDayFragment : Fragment(R.layout.fragment_picture_of_the_day) {
 
-    private val viewModel: MainViewModel by viewModels {
+    private val viewModel: PictureOfTheDayModel by viewModels {
         MainViewModelFactory(NasaRepositoryImplementation())
     }
 
@@ -30,7 +32,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val binding = FragmentMainBinding.bind(view)
+        val binding = FragmentPictureOfTheDayBinding.bind(view)
 
         binding.inputLayout.setEndIconOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW).apply {
@@ -69,7 +71,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         }
 
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {
-            viewModel.explanation.collect() {
+            viewModel.explanation.collect {
                 binding.includeBottomSheet.explanationTv.text = it
             }
         }

@@ -1,4 +1,4 @@
-package com.hedgehog.androidmaterialdesign.ui
+package com.hedgehog.androidmaterialdesign.view_models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import java.io.IOException
 
-class MainViewModel(private val repository: NasaRepository) : ViewModel() {
+class PictureOfTheDayModel(private val repository: NasaRepository) : ViewModel() {
     private val _loading = MutableStateFlow(false)
     val loading: Flow<Boolean> = _loading
 
@@ -47,5 +47,5 @@ class MainViewModel(private val repository: NasaRepository) : ViewModel() {
 }
 
 class MainViewModelFactory(private val repository: NasaRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T = MainViewModel(repository) as T
+    override fun <T : ViewModel> create(modelClass: Class<T>): T = PictureOfTheDayModel(repository) as T
 }

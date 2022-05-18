@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.ActivityMainBinding
+import com.hedgehog.androidmaterialdesign.ui.settings.ChooseThemeFragment
+import com.hedgehog.androidmaterialdesign.ui.view_pager.ViewPager
 
 const val ThemeDefault = 0
 const val ThemeGreen = 1
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private fun initFragment() {
-        supportFragmentManager.beginTransaction().replace(R.id.main_container, MainFragment())
+        supportFragmentManager.beginTransaction().replace(R.id.main_container, ViewPager())
             .commit()
     }
 
