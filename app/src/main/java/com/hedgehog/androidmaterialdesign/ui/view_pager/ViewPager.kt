@@ -11,6 +11,9 @@ import com.hedgehog.androidmaterialdesign.ui.fragments.PictureOfTheDayFragment
 class ViewPager : Fragment(R.layout.fragment_view_pager) {
     private val listFragment = listOf<Fragment>(
         PictureOfTheDayFragment(),
+        PictureOfTheDayFragment(),
+        PictureOfTheDayFragment(),
+        PictureOfTheDayFragment()
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -18,5 +21,6 @@ class ViewPager : Fragment(R.layout.fragment_view_pager) {
         val binding = FragmentViewPagerBinding.bind(view)
         val adapter = ViewPagerAdapter(requireActivity(), listFragment)
         binding.viewPager.adapter = adapter
+        binding.dotsIndicator.setViewPager2(binding.viewPager)
     }
 }

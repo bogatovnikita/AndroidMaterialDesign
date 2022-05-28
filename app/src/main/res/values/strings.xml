@@ -9,4 +9,5 @@
     <string name="default_theme">Default theme</string>
     <string name="nasa_api">Nasa API</string>
     <string name="about">About</string>
+    <string name="description">description</string>
 </resources>

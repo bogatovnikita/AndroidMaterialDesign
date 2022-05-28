@@ -73,4 +73,14 @@
         android:id="@+id/include_bottom_sheet"
         layout="@layout/fragment_bottom_sheet" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/blue"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_description_24" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

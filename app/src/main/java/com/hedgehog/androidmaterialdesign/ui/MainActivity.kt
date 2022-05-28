@@ -2,6 +2,7 @@ package com.hedgehog.androidmaterialdesign.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.ActivityMainBinding
 import com.hedgehog.androidmaterialdesign.ui.settings.ChooseThemeFragment
@@ -15,13 +16,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val KEY_SP = "sp"
     private val KEY_CURRENT_THEME = "current_theme"
 
-    private lateinit var binding: ActivityMainBinding
+    private val binding:ActivityMainBinding by viewBinding()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setTheme(getRealStyle(getCurrentTheme()))
-        setContentView(binding.root)
         if (savedInstanceState == null) initFragment()
         initCLickMenu()
         initClickBottomNavigation()
