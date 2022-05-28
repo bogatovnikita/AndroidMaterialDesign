@@ -1,4 +1,4 @@
-package com.hedgehog.androidmaterialdesign.ui
+package com.hedgehog.androidmaterialdesign.ui.settings
 
 import android.content.Context
 import android.os.Bundle
@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.FragmentChooseThemeBinding
+import com.hedgehog.androidmaterialdesign.ui.MainActivity
+import com.hedgehog.androidmaterialdesign.ui.ThemeDefault
+import com.hedgehog.androidmaterialdesign.ui.ThemeGreen
+import com.hedgehog.androidmaterialdesign.ui.ThemePink
 
 class ChooseThemeFragment : Fragment(R.layout.fragment_choose_theme) {
     private var _binding: FragmentChooseThemeBinding? = null
