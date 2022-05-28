@@ -10,6 +10,13 @@
         android:id="@+id/about"
         android:enabled="true"
         android:icon="@drawable/ic_sharp_two_wheeler_24"
+        android:iconTint="@color/black"
         android:title="@string/about"/>
+
+    <item
+        android:id="@+id/wiki"
+        android:enabled="true"
+        android:icon="@drawable/ic_wikipedia"
+        android:title="@string/wiki"/>
 
 </menu>

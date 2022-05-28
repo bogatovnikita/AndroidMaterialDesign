@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.ActivityMainBinding
+import com.hedgehog.androidmaterialdesign.ui.fragments.WikiSearchFragment
 import com.hedgehog.androidmaterialdesign.ui.settings.ChooseThemeFragment
 import com.hedgehog.androidmaterialdesign.ui.view_pager.ViewPager
 
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val KEY_SP = "sp"
     private val KEY_CURRENT_THEME = "current_theme"
 
-    private val binding:ActivityMainBinding by viewBinding()
+    private val binding: ActivityMainBinding by viewBinding()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     true
                 }
                 R.id.about -> {
+                    true
+                }
+                R.id.wiki -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, WikiSearchFragment())
+                        .addToBackStack("")
+                        .commit()
                     true
                 }
                 else -> false
