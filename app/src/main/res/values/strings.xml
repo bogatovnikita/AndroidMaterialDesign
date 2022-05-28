@@ -3,4 +3,8 @@
     <string name="network_error">Network error</string>
     <string name="search_wiki">Search in Wikipedia</string>
     <string name="wiki_helper_text">Look up the term on wikipedia</string>
+    <string name="choose_theme">Choose theme app</string>
+    <string name="pink_theme">Pink theme</string>
+    <string name="green_theme">Green theme</string>
+    <string name="default_theme">Default theme</string>
 </resources>
