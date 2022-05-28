@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/drawable/background_bottom_sheet.xml" value="0.16296296296296298" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/activity_main.xml" value="0.20615384615384616" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.209375" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_choose_theme.xml" value="0.209375" />
@@ -11,8 +12,10 @@
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_picture_of_the_day.xml" value="0.1259259259259259" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/fragment_view_pager.xml" value="0.15" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/layout/frahment_choose_theme.xml" value="0.20615384615384616" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/menu/main_menu.xml" value="0.209375" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/menu/menu.xml" value="0.20615384615384616" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/AndroidMaterialDesign/app/src/main/res/menu/toolbar_menu.xml" value="0.209375" />
       </map>
     </option>
   </component>

@@ -9,12 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import coil.load
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.FragmentPictureOfTheDayBinding
 import com.hedgehog.androidmaterialdesign.domain.NasaRepositoryImplementation
-import com.hedgehog.androidmaterialdesign.view_models.PictureOfTheDayModel
 import com.hedgehog.androidmaterialdesign.view_models.MainViewModelFactory
+import com.hedgehog.androidmaterialdesign.view_models.PictureOfTheDayModel
 
 class PictureOfTheDayFragment : Fragment(R.layout.fragment_picture_of_the_day) {
 
@@ -59,9 +58,6 @@ class PictureOfTheDayFragment : Fragment(R.layout.fragment_picture_of_the_day) {
                     binding.pictureOfTheDayImg.load(it)
                 }
             }
-            val bottomSheetFragment =
-                BottomSheetBehavior.from(binding.includeBottomSheet.bottomSheetContainer)
-            bottomSheetFragment.state = BottomSheetBehavior.STATE_COLLAPSED
         }
 
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {

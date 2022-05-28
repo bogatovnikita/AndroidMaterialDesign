@@ -7,4 +7,6 @@
     <string name="pink_theme">Pink theme</string>
     <string name="green_theme">Green theme</string>
     <string name="default_theme">Default theme</string>
+    <string name="nasa_api">Nasa API</string>
+    <string name="about">About</string>
 </resources>

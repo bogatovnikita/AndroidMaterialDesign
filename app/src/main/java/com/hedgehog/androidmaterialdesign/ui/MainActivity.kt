@@ -24,6 +24,22 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
         if (savedInstanceState == null) initFragment()
         initCLickMenu()
+        initClickBottomNavigation()
+    }
+
+    private fun initClickBottomNavigation() {
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.nasa_api_picture -> {
+                    initFragment()
+                    true
+                }
+                R.id.about -> {
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     private fun initCLickMenu() {

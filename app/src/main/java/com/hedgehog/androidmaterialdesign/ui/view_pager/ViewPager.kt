@@ -5,14 +5,12 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.FragmentViewPagerBinding
-import com.hedgehog.androidmaterialdesign.ui.fragments.PictureOfTheDayFragment
 import com.hedgehog.androidmaterialdesign.ui.adapters.ViewPagerAdapter
-import com.hedgehog.androidmaterialdesign.ui.fragments.EarthPictureFragment
+import com.hedgehog.androidmaterialdesign.ui.fragments.PictureOfTheDayFragment
 
 class ViewPager : Fragment(R.layout.fragment_view_pager) {
     private val listFragment = listOf<Fragment>(
         PictureOfTheDayFragment(),
-        PictureOfTheDayFragment()
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

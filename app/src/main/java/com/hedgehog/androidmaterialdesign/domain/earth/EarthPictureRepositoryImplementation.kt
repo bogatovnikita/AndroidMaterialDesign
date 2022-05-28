@@ -24,5 +24,5 @@ class EarthPictureRepositoryImplementation : EarthPictureRepository {
         .create(EarthPictureApi::class.java)
 
     override suspend fun earthPicture(): EarthPictureResponse =
-        api.earthPicture(BuildConfig.NASA_APP_KEY)
+        api.earthPicture(BuildConfig.NASA_API_KEY)
 }
