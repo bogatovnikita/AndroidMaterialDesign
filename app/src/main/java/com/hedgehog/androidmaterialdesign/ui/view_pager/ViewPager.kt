@@ -12,7 +12,6 @@ class ViewPager : Fragment(R.layout.fragment_view_pager) {
     private val listFragment = listOf<Fragment>(
         PictureOfTheDayFragment(),
         PictureOfTheDayFragment(),
-        PictureOfTheDayFragment(),
         PictureOfTheDayFragment()
     )
 
