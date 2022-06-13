@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nasa_api_picture"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_emoji_people_24"
+        android:title="@string/nasa_api" />
+
+    <item
+        android:id="@+id/about"
+        android:enabled="true"
+        android:icon="@drawable/ic_sharp_two_wheeler_24"
+        android:iconTint="@color/black"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/wiki"
+        android:enabled="true"
+        android:icon="@drawable/ic_wikipedia"
+        android:title="@string/wiki" />
+
+</menu>

@@ -36,6 +36,8 @@ class EarthPictureViewModel(private val repository: EarthPictureRepository) : Vi
     }
 }
 
-class EarthPictureFactory(private val repository: EarthPictureRepository):ViewModelProvider.Factory{
-    override fun <T : ViewModel> create(modelClass: Class<T>): T = EarthPictureViewModel(repository) as T
+class EarthPictureFactory(private val repository: EarthPictureRepository) :
+    ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T =
+        EarthPictureViewModel(repository) as T
 }

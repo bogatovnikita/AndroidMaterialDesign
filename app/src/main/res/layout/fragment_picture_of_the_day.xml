@@ -42,35 +42,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_tv" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputLayout"
-            style="@style/MyTextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_6sdp"
-            android:layout_marginTop="@dimen/_14sdp"
-            android:layout_marginEnd="@dimen/_6sdp"
-            android:hint="@string/search_wiki"
-            app:counterEnabled="true"
-            app:counterMaxLength="100"
-            app:endIconDrawable="@drawable/ic_wikipedia"
-            app:endIconMode="custom"
-            app:helperText="@string/wiki_helper_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/picture_of_the_day_img"
-            app:startIconDrawable="@drawable/ic_plus_fab">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputEditText"
-                style="@style/MyTextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
         android:id="@+id/include_bottom_sheet"
         layout="@layout/fragment_bottom_sheet" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/blue"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_description_24" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

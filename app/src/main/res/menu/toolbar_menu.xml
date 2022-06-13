@@ -6,5 +6,5 @@
         android:id="@+id/choose_theme_item_menu"
         android:icon="@drawable/ic_baseline_colorize_24"
         android:title="@string/choose_theme"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>

@@ -1,22 +1,24 @@
 package com.hedgehog.androidmaterialdesign.ui.fragments
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
+import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hedgehog.androidmaterialdesign.R
 import com.hedgehog.androidmaterialdesign.databinding.FragmentPictureOfTheDayBinding
 import com.hedgehog.androidmaterialdesign.domain.NasaRepositoryImplementation
-import com.hedgehog.androidmaterialdesign.view_models.PictureOfTheDayModel
 import com.hedgehog.androidmaterialdesign.view_models.MainViewModelFactory
+import com.hedgehog.androidmaterialdesign.view_models.PictureOfTheDayModel
 
 class PictureOfTheDayFragment : Fragment(R.layout.fragment_picture_of_the_day) {
+
+
+    private val binding: FragmentPictureOfTheDayBinding by viewBinding()
 
     private val viewModel: PictureOfTheDayModel by viewModels {
         MainViewModelFactory(NasaRepositoryImplementation())
@@ -32,15 +34,28 @@ class PictureOfTheDayFragment : Fragment(R.layout.fragment_picture_of_the_day) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val binding = FragmentPictureOfTheDayBinding.bind(view)
+        setupFragment()
+        initClickFAB()
+    }
 
-        binding.inputLayout.setEndIconOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW).apply {
-                data =
-                    Uri.parse("https://en.wikipedia.org/wiki/${binding.inputEditText.text.toString()}")
-            })
+    private fun initClickFAB() {
+        var flagButtonFab = true
+        val standardBottomSheetBehavior =
+            BottomSheetBehavior.from(binding.includeBottomSheet.bottomSheetContainer)
+
+        binding.fabButton.setOnClickListener {
+            if (flagButtonFab) {
+                standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+                flagButtonFab = false
+            } else {
+                standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+                flagButtonFab = true
+
+            }
         }
+    }
 
+    private fun setupFragment() {
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {
             viewModel.loading.collect {
                 binding.progressBar.visibility = if (it) View.VISIBLE else View.GONE
@@ -59,9 +74,6 @@ class PictureOfTheDayFragment : Fragment(R.layout.fragment_picture_of_the_day) {
                     binding.pictureOfTheDayImg.load(it)
                 }
             }
-            val bottomSheetFragment =
-                BottomSheetBehavior.from(binding.includeBottomSheet.bottomSheetContainer)
-            bottomSheetFragment.state = BottomSheetBehavior.STATE_COLLAPSED
         }
 
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {

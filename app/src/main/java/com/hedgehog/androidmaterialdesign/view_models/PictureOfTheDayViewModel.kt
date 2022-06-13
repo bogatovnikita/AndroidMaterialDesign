@@ -47,5 +47,6 @@ class PictureOfTheDayModel(private val repository: NasaRepository) : ViewModel()
 }
 
 class MainViewModelFactory(private val repository: NasaRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T = PictureOfTheDayModel(repository) as T
+    override fun <T : ViewModel> create(modelClass: Class<T>): T =
+        PictureOfTheDayModel(repository) as T
 }
